@@ -2,20 +2,20 @@
 # and creates a tidy data set, saved as the file tidydata.txt that contains a summary by subject and activity
 # Please refe to the Readme.d file for more overview
 
-library("data.table")
+require(reshape2)
+require(data.table)
 
 # The descLables function is used in step #3 of the exercise. It renames the lables of data set with a more
 # descriptive names. The returned lables are longer names in favor of more self explanatory names
 # Main transformation:
-#       - leading 't'replaced with 'time'
+#       - leading 't' replaced with 'time'
 #       - leading 'f' replaced with 'frequency'
 #       - replaced abbreviation with full word: Accelerometer(Acc), Gyroscope(Gyro), Magnitude(Mag) 
 
 descLables <- function(lables)
 {
         updatedLables <- lables
-        # strip the '()'
-        updatedLables = gsub("\\(\\)", "", updatedLables) 
+        updatedLables = gsub("\\(\\)", "", updatedLables)          # strip the '()'
         updatedLables = gsub("-mean", "mean", updatedLables)
         updatedLables = gsub("-std", "std", updatedLables)
         updatedLables = gsub("^t", "time_", updatedLables)
@@ -23,18 +23,14 @@ descLables <- function(lables)
         updatedLables = gsub("Acc", "Accelerometer_", updatedLables)
         updatedLables = gsub("Gyro", "Gyroscope_", updatedLables)
         updatedLables = gsub("Mag", "Magnitude_", updatedLables)
-        # for consistency use '_' to separate words
-        updatedLables = gsub("Jerk", "Jerk_", updatedLables)
-        # remove redundant Body in naming
-        updatedLables = gsub("BodyBody", "Body", updatedLables)
+        updatedLables = gsub("Jerk", "Jerk_", updatedLables)         # for consistency use '_' to separate words
+        updatedLables = gsub("BodyBody", "Body", updatedLables)      # remove redundant Body in naming
         updatedLables = gsub("Body", "Body_", updatedLables)
-        # for consistency replace any remaining '-' with '_'
-        updatedLables = gsub("-", "_", updatedLables)
+        updatedLables = gsub("-", "_", updatedLables)                # for consistency replace any remaining '-' with '_'
         return(updatedLables)
 }
 
 #### In preparation for part 1: first, read the data files
-
 # The feature vector  
 test_data = read.table("./test/X_test.txt")
 train_data = read.table("./train/X_train.txt")
