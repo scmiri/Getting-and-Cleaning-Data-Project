@@ -45,10 +45,10 @@ mean(): Mean value
 std(): Standard deviation
 ```
 Transformation to the raw data labels:
---------------------------------------
+```
 To improve readability of the feature labels, the following are the main transformation performed to the raw data labels:
 - leading 't' replaced with 'time'
 - leading 'f' replaced with 'frequency'
 - replaced abbreviation with full word: Accelerometer(Acc), Gyroscope(Gyro), Magnitude(Mag)
 - removed redundant Body in naming
-
+```
