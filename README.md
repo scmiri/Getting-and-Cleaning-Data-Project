@@ -30,6 +30,8 @@ run_analysis.R script requires the data.table package installed beforehead.
 
 The run_analysis.R script performs the following steps:
 
+Script steps
+-------------
 **1. Merging the training and tests data sets (total of 6 files) into one big data frame.**
 The code reads the following files under the downloaded folder "UCI HAR Dataset", each files is read into a table
 ```
@@ -40,13 +42,11 @@ The code reads the following files under the downloaded folder "UCI HAR Dataset"
 -	test/y_test.txt
 -	train/y_train.txt
 ```
-The approach I selected performs steps 2 and 3 that are described below before continuing with merging the test and train data. That was a more intuitive order of actions to me: first tidy up the feature measurement data then continue with the merge. 
-Note that the current implementation was not optimized for best performance.
+The approach I selected performs steps 2 and 3 that are described below before continuing with merging the test and train data. That was a more intuitive order of actions to me: first tidy up the feature measurement data then continue with the merge. Note that the current implementation was not optimized for best performance.
   
 After extracting measurements for the mean and std in each of the features data sets(X_test.txt ,X_train.txt), the features labels were updated with more descriptive names. 
 
-Using cbind(), the respective test/train subject and activity tables were joined to the test/train features measurement tables. 
-The merge() was used then to merge the test and train data sets. The result is converted into data table.
+Using cbind(), the respective test/train subject and activity tables were joined to the test/train features measurement tables. The merge() was used then to merge the test and train data sets. The result is converted into data table.
 
 **2. Extracting only the measurements on the mean and standard deviation for each measurement**
 The names to the 561 features are read from the the features.txt file.
@@ -62,12 +62,13 @@ There are quite a few manipulations done to the names and to improve the readabi
 
 The function is using ‘gsub()’ to match patterns and replacing words.
 The main transformation done:
+```
 -	leading 't 'replaced with 'time'
 -	leading 'f' replaced with 'frequency'
 -	replaced abbreviation with full word: Accelerometer(Acc), Gyroscope(Gyro), Magnitude(Mag)
 -	removed redundant extra ‘Body’ word
 -	Using ‘_’ to separate words inside a name 
-
+```
 **5. Creating a second, independent tidy data set with the average of each variable for each activity and each subject**
 I used datatable () from the data.table library to aggregate the data by the mean per subject and activity.
 A new tidydata.txt file using the write.table() function
