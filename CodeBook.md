@@ -45,13 +45,13 @@ frequency_Body_Accelerometer_Jerk_Magnitude_XYZ
 frequency_Body_ Gyroscope_Magnitude_XYZ
 frequency_Body_ Gyroscope_Jerk_Magnitude_XYZ
 ```
-The names will appear in combination of the below set of variables that were estimated from these signals: 
+The names will appear in combination with the below set of variables that were estimated from these signals: 
 ```
 mean(): Mean value
 std(): Standard deviation
 ```
 
-To improve readability of the feature labels, the following are the main transformation performed to the raw data labels:
+Note: to improve readability of the feature labels, the following are the main transformation performed to the raw data labels:
 ```
 - leading 't' replaced with 'time'
 - leading 'f' replaced with 'frequency'
