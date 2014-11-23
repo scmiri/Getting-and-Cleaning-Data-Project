@@ -14,9 +14,10 @@ Running the script
 -------------------
 To run the code you will first download the Human Activity Recognition data to local directory computer from here:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
-A folder names 'UCI HAR Dataset' is downloaded. Place the run_analysis.R script in the same folder.
-In your R studio set the working directory to this folder's path.
-source("run_analysis.r")
+A folder names 'UCI HAR Dataset' is downloaded. 
+- Place the run_analysis.R script in the same folder.
+- In your R studio set the working directory to this folder's path.
+- source("run_analysis.r")
 
 Dependencies
 -------------
