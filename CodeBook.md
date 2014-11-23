@@ -10,7 +10,8 @@ Processed Data
 -----------------
 The tidy data contains
 ```
-- Activity: The activity label for each measurement. This can be one of: WALKING,WALKING_UPSTAIRS,WALKING_DOWNSTAIRS, SITTING,STANDING,LAYING
+- Activity: The activity label for each measurement. This can be one of: 
+WALKING,WALKING_UPSTAIRS,WALKING_DOWNSTAIRS, SITTING,STANDING,LAYING
 - Subject: the identifier of the subject who carried out the experiment. This ranges between 1 and 30.
 - A set of features for which the description is brought belwo
 ```
