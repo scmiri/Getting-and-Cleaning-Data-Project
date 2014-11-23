@@ -13,20 +13,20 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 Running the script
 -------------------
 To run the code you will first download the Human Activity Recognition data to local directory computer from here:
-https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
 A folder names 'UCI HAR Dataset' is downloaded. Place the run_analysis.R script in the same folder.
-In your R studio set the working directory to this folder's path. 
+In your R studio set the working directory to this folder's path.
 source("run_analysis.r")
+
+Dependencies
+-------------
+run_analysis.R script requires the data.table and reshape2 packages.
 
 Viewing the tidydata file
 -------------------------
 To view the data file in R use
 data <- read.table("tidydata.txt", header = TRUE)
 View(data)
-
-Dependencies
--------------
-run_analysis.R script requires the data.table package installed beforehead.
 
 The run_analysis.R script performs the following steps:
 
