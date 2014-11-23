@@ -9,9 +9,9 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 Processed Data
 -----------------
 The tidy data contains
-1.	Activity: The activity label for each measurement. This can be one of: WALKING,WALKING_UPSTAIRS,WALKING_DOWNSTAIRS, SITTING,STANDING,LAYING
-2.	Subject: the identifier of the subject who carried out the experiment. This ranges between 1 and 30.
-3.	A set of features for which the description is brought belwo
+- Activity: The activity label for each measurement. This can be one of: WALKING,WALKING_UPSTAIRS,WALKING_DOWNSTAIRS, SITTING,STANDING,LAYING
+- Subject: the identifier of the subject who carried out the experiment. This ranges between 1 and 30.
+- A set of features for which the description is brought belwo
 
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals time_Accelerometer _XYZ and time_Gyroscope_XYZ. These time domain signals were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (time_Body_Accelerometer_XYZ and time_Gravity_ Accelerometer_XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (time_Body_ Accelerometer_Jerk_XYZ and time_Body_Gyroscope_Jerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (time_Body_Accelerometer_Magnitude, time_Gravity_Accelerometer_Magnitude, time_Body_ Accelerometer_Jerk_Magnitude, time_Body_ Gyroscope_Magnitude, time_Body_Gyroscope _Jerk_Magnitude). 
@@ -45,8 +45,8 @@ std(): Standard deviation
 Transformation to the raw data labels:
 --------------------------------------
 To improve readability of the feature labels, the following are the main transformation performed to the raw data labels:
-o	leading 't' replaced with 'time'
-o	leading 'f' replaced with 'frequency'
-o	replaced abbreviation with full word: Accelerometer(Acc), Gyroscope(Gyro), Magnitude(Mag)
-o	removed redundant Body in naming
+- leading 't' replaced with 'time'
+- leading 'f' replaced with 'frequency'
+- replaced abbreviation with full word: Accelerometer(Acc), Gyroscope(Gyro), Magnitude(Mag)
+- removed redundant Body in naming
 
